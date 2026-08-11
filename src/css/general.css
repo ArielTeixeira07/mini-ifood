@@ -1,0 +1,71 @@
+.cabecalho{
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    border-color: #c62828;
+    border-bottom: 1px solid #c62828;
+}
+
+.cabecalho .logo{
+    display: flex;
+    gap: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+.cabecalho .menu{
+    display: flex;
+    gap: 25px;
+    list-style-type: none;
+}
+
+.cabecalho .menu li a{
+    padding: 30px;
+    color: #c62828;
+    font-weight: bolder;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.cabecalho .menu li a:hover{
+    border-bottom: 2px solid #e63946;
+}
+
+
+
+body{
+    font-family: arial;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+h1{
+    color: #e63946;
+}
+
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+button{
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #c62828;
+}
