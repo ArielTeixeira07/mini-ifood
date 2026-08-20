@@ -28,6 +28,10 @@ function fazerPedido(){
     alert("Pedido: " + produto + "\nTotal: R$ " + total);
 }
 
+
+
+let carrinho = [];
+
 const botoes = document.querySelectorAll(".card button");
 
 botoes.forEach((botao) => {
@@ -35,7 +39,29 @@ botoes.forEach((botao) => {
         const nome = botao.dataset.nome;
         const preco = botao.dataset.preco;
 
+        carrinho.push({
+            nome: nome,
+            preco: preco
+        });
+
+        mostrarCarrinho();
+
         console.log("Produto:", nome);
         console.log("Preço :", preco);
+        console.log("Carrinho:", carrinho);
     });
 });
+
+function mostrarCarrinho(){
+    const listaCarrinho = document.querySelector("#listaCarrinho");
+
+    listaCarrinho.innerHTML = "";
+
+    carrinho.forEach((produto) => {
+        const item = document.createElement("p");
+
+        item.textContent = produto.nome + "-R$ " + produto.preco;
+
+        listaCarrinho.appendChild(item);
+    });
+}
