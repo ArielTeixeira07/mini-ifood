@@ -5,15 +5,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 80px;
-    border-color: #c62828;
     border-bottom: 1px solid #c62828;
 }
 
 .cabecalho .logo{
-    display: flex;
-    gap: 15px;
-    height: 200px;
-    width: 200px;
+    height: 60px;
+    width: 80px;
 }
 
 .cabecalho .menu{
@@ -23,7 +20,7 @@
 }
 
 .cabecalho .menu li a{
-    padding: 30px;
+    padding: 10px 25px;
     color: #c62828;
     font-weight: bolder;
     font-size: 15px;
@@ -32,15 +29,16 @@
 
 .cabecalho .menu li a:hover{
     border-bottom: 2px solid #e63946;
+    color: #e63946;
 }
 
 
 
 body{
+    margin: 0;
     font-family: arial;
     background-color: #f5f5f5;
     text-align: center;
-    padding: 20px;
 }
 
 h1{
@@ -51,18 +49,24 @@ h1{
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card{
     background: white;
     padding: 20px;
     border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
 }
 
-button{
+.card img{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+button{ 
     background-color: #e63946;
     color: white;
     border: none;
