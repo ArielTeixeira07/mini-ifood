@@ -27,3 +27,15 @@ function fazerPedido(){
     //Resultado final
     alert("Pedido: " + produto + "\nTotal: R$ " + total);
 }
+
+const botoes = document.querySelectorAll(".card button");
+
+botoes.forEach((botao) => {
+    botao.addEventListener("click", () => {
+        const nome = botao.dataset.nome;
+        const preco = botao.dataset.preco;
+
+        console.log("Produto:", nome);
+        console.log("Preço :", preco);
+    });
+});
