@@ -63,6 +63,8 @@ function mostrarCarrinho(){
 
     listaCarrinho.innerHTML = "";
 
+    let total = 0;
+
     carrinho.forEach((produto) => {
         const item = document.createElement("p");
 
