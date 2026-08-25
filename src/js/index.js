@@ -39,10 +39,16 @@ botoes.forEach((botao) => {
         const nome = botao.dataset.nome;
         const preco = botao.dataset.preco;
 
-        carrinho.push({
+        const produtoExistente = carrinho.find ((produto) => produto.nome === nome);
+        if (produtoExistente) {
+            produtoExistente.quantidade ++;
+        }else {
+            carrinho.push({
             nome: nome,
-            preco: preco
+            preco: preco,
+            quantidade: 1
         });
+        }
 
         mostrarCarrinho();
 
@@ -60,7 +66,7 @@ function mostrarCarrinho(){
     carrinho.forEach((produto) => {
         const item = document.createElement("p");
 
-        item.textContent = produto.nome + "-R$ " + produto.preco;
+        item.textContent = produto.nome + "-R$ " + produto.preco + " - Qantidade " + produto.quantidade;
 
         listaCarrinho.appendChild(item);
     });
