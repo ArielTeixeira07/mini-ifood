@@ -67,9 +67,24 @@ function mostrarCarrinho(){
     let total = 0;
 
     carrinho.forEach((produto) => {
-        const item = document.createElement("p");
+        const item = document.createElement("div");
 
-        item.textContent = produto.nome + "-R$ " + produto.preco + " - Qantidade " + produto.quantidade;
+        const nome = document.createElement("span");
+        nome.textContent = produto.nome + "-R$ " + produto.preco;
+
+        const diminuir = document.createElement("button");
+        diminuir.textContent = "-";
+
+        const quantidade = document.createElement("span");
+        quantidade.textContent = produto.quantidade;
+
+        const aumentar = document.createElement("button");
+        aumentar.textContent = "+";
+
+        item.appendChild(nome);
+        item.appendChild(diminuir);
+        item.appendChild(quantidade);
+        item.appendChild(aumentar);
 
         listaCarrinho.appendChild(item);
 
