@@ -71,5 +71,9 @@ function mostrarCarrinho(){
         item.textContent = produto.nome + "-R$ " + produto.preco + " - Qantidade " + produto.quantidade;
 
         listaCarrinho.appendChild(item);
+
+        total += produto.preco * produto.quantidade;
     });
+
+    console.log("Total do carrinho:", total);
 }
