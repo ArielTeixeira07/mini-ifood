@@ -60,6 +60,7 @@ botoes.forEach((botao) => {
 
 function mostrarCarrinho(){
     const listaCarrinho = document.querySelector("#listaCarrinho");
+    const totalCarrinho = document.querySelector("#totalCarrinho");
 
     listaCarrinho.innerHTML = "";
 
@@ -75,5 +76,5 @@ function mostrarCarrinho(){
         total += produto.preco * produto.quantidade;
     });
 
-    console.log("Total do carrinho:", total);
+    totalCarrinho.textContent = "Total: R$ " + total.toFixed(2);
 }
