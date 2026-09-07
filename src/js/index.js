@@ -75,11 +75,26 @@ function mostrarCarrinho(){
         const diminuir = document.createElement("button");
         diminuir.textContent = "-";
 
+        diminuir.addEventListener("click", () => {
+            produto.quantidade--;
+
+            if (produto.quantidade === 0) {
+                carrinho = carrinho.filter((item) => item !== produto);
+            }
+
+            mostrarCarrinho();
+        });
+
         const quantidade = document.createElement("span");
         quantidade.textContent = produto.quantidade;
 
         const aumentar = document.createElement("button");
         aumentar.textContent = "+";
+
+        aumentar.addEventListener("click", () => {
+            produto.quantidade++;
+            mostrarCarrinho();
+        });
 
         item.appendChild(nome);
         item.appendChild(diminuir);
