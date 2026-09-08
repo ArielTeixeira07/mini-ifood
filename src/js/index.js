@@ -70,7 +70,7 @@ function mostrarCarrinho(){
         const item = document.createElement("div");
 
         const nome = document.createElement("span");
-        nome.textContent = produto.nome + "-R$ " + produto.preco;
+        nome.textContent = produto.nome + "-R$ " + Number(produto.preco).toFixed(2).replace(".", ",");
 
         const diminuir = document.createElement("button");
         diminuir.textContent = "-";
@@ -106,5 +106,5 @@ function mostrarCarrinho(){
         total += produto.preco * produto.quantidade;
     });
 
-    totalCarrinho.textContent = "Total: R$ " + total.toFixed(2);
+    totalCarrinho.textContent = "Total: R$ " + total.toFixed(2).replace("." , ",");
 }
