@@ -95,11 +95,20 @@ function mostrarCarrinho(){
             produto.quantidade++;
             mostrarCarrinho();
         });
+            const remover = document.createElement("img");
+            remover.src = "./src/img/bin.png";
+            remover.alt = "remover produto";
+
+            remover.addEventListener("click", () => {
+                carrinho = carrinho.filter((item) => item !== produto);
+                mostrarCarrinho();
+        });                                            
 
         item.appendChild(nome);
         item.appendChild(diminuir);
         item.appendChild(quantidade);
         item.appendChild(aumentar);
+        item.appendChild(remover);
 
         listaCarrinho.appendChild(item);
 
@@ -107,4 +116,4 @@ function mostrarCarrinho(){
     });
 
     totalCarrinho.textContent = "Total: R$ " + total.toFixed(2).replace("." , ",");
-}
+} 
