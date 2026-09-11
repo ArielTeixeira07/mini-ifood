@@ -149,10 +149,28 @@ button:hover{
 }
 
 #listaCarrinho > div{
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 75px 30px 24px 30px 24px;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 15px;
+}
+
+#listaCarrinho > div span:first-child{
+    white-space: nowrap;
+}
+
+#listaCarrinho > div span:nth-of-type(2){
+    text-align: center;
+    white-space: nowrap;
+}
+
+#listaCarrinho button{
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    position: relative;
+    top: -8px;
 }
 
 #listaCarrinho img{
