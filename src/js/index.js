@@ -133,3 +133,15 @@ function mostrarCarrinho(){
             
                 contador.textContent = quantidadeTotal;
             }
+
+            const linkCarrinho = document.querySelector("#linkCarrinho");
+            const carrinhoElemento = document.querySelector("#carrinho");
+            const fecharCarrinho = document.querySelector("#fecharCarrinho");
+
+            linkCarrinho.addEventListener("click", () => {
+                carrinhoElemento.classList.add("aberto");
+            });
+
+            fecharCarrinho.addEventListener("click", () => {
+                carrinhoElemento.classList.remove("aberto");
+            });

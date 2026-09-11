@@ -107,3 +107,81 @@ button:hover{
     font-size: 11px;
     padding: 3px 6px;
 }
+
+#carrinho{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    box-sizing: border-box;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    z-index: 1000;
+}
+
+#carrinho.aberto{
+    transform: translateX(0);
+}
+
+.cabecalho-carrinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cabecalho-carrinho h2{
+    margin: 0;
+}
+
+#fecharCarrinho{
+    border: none;
+    background-color: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+}
+
+#listaCarrinho > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#listaCarrinho img{
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.rodape-carrinho{
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+#totalCarrinho{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#finalizarPedido{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e63946;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
