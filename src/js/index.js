@@ -103,35 +103,33 @@ function mostrarCarrinho(){
             remover.src = "./src/img/bin.png";
             remover.alt = "remover produto";
 
-            remover.addEventListener("click", () => {
-                carrinho = carrinho.filter((item) => item !== produto);
-
-                mostrarCarrinho();
-                atualizarContador();
-        });                                            
-
-        item.appendChild(nome);
-        item.appendChild(diminuir);
-        item.appendChild(quantidade);
-        item.appendChild(aumentar);
-        item.appendChild(remover);
-
-        listaCarrinho.appendChild(item);
-
-        total += produto.preco * produto.quantidade;
-    });
-
-    totalCarrinho.textContent = "Total: R$ " + total.toFixed(2).replace("." , ",");
-} 
-
-function atualizarContador() {
-    const contador = document.querySelector("#contadorCarrinho");
-
-    let quantidadeTotal = 0;
-
-    carrinho.forEach((produto) => {
-        quantidadeTotal += produto.quantidade;
-    });
-
-    contador.textContent = quantidadeTotal;
-}
+                        remover.addEventListener("click", () => {
+                            carrinho = carrinho.filter((item) => item !== produto);
+                            mostrarCarrinho();
+                    });                                            
+            
+                    item.appendChild(nome);
+                    item.appendChild(diminuir);
+                    item.appendChild(quantidade);
+                    item.appendChild(aumentar);
+                    item.appendChild(remover);
+            
+                    listaCarrinho.appendChild(item);
+            
+                    total += produto.preco * produto.quantidade;
+                });
+            
+                totalCarrinho.textContent = "Total: R$ " + total.toFixed(2).replace("." , ",");
+            } 
+            
+            function atualizarContador() {
+                const contador = document.querySelector("#contadorCarrinho");
+            
+                let quantidadeTotal = 0;
+            
+                carrinho.forEach((produto) => {
+                    quantidadeTotal += produto.quantidade;
+                });
+            
+                contador.textContent = quantidadeTotal;
+            }
