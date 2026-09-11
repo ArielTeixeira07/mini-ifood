@@ -51,6 +51,7 @@ botoes.forEach((botao) => {
         }
 
         mostrarCarrinho();
+        atualizarContador();
 
         console.log("Produto:", nome);
         console.log("Preço :", preco);
@@ -83,6 +84,7 @@ function mostrarCarrinho(){
             }
 
             mostrarCarrinho();
+            atualizarContador();
         });
 
         const quantidade = document.createElement("span");
@@ -93,7 +95,9 @@ function mostrarCarrinho(){
 
         aumentar.addEventListener("click", () => {
             produto.quantidade++;
+
             mostrarCarrinho();
+            atualizarContador();
         });
             const remover = document.createElement("img");
             remover.src = "./src/img/bin.png";
@@ -101,7 +105,9 @@ function mostrarCarrinho(){
 
             remover.addEventListener("click", () => {
                 carrinho = carrinho.filter((item) => item !== produto);
+
                 mostrarCarrinho();
+                atualizarContador();
         });                                            
 
         item.appendChild(nome);
@@ -117,3 +123,15 @@ function mostrarCarrinho(){
 
     totalCarrinho.textContent = "Total: R$ " + total.toFixed(2).replace("." , ",");
 } 
+
+function atualizarContador() {
+    const contador = document.querySelector("#contadorCarrinho");
+
+    let quantidadeTotal = 0;
+
+    carrinho.forEach((produto) => {
+        quantidadeTotal += produto.quantidade;
+    });
+
+    contador.textContent = quantidadeTotal;
+}
