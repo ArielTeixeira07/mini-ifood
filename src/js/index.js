@@ -109,6 +109,7 @@ function mostrarCarrinho(){
                         remover.addEventListener("click", () => {
                             carrinho = carrinho.filter((item) => item !== produto);
                             mostrarCarrinho();
+                            atualizarContador();
                     });                                            
             
                     item.appendChild(nome);
