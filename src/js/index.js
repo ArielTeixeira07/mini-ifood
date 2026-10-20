@@ -150,3 +150,13 @@ function mostrarCarrinho(){
             fecharCarrinho.addEventListener("click", () => {
                 carrinhoElemento.classList.remove("aberto");
             });
+
+            const botaoFinalizar = document.querySelector("#finalizarPedido");
+            botaoFinalizar.addEventListener("click", () => {
+                if (carrinho.length === 0) {
+                    alert("Seu carrinho está vazio!");
+                    return;
+                }
+
+                alert("Vamos finalizar seu pedido!");
+            })
