@@ -158,5 +158,35 @@ function mostrarCarrinho(){
                     return;
                 }
 
-                alert("Vamos finalizar seu pedido!");
+                let subtotal = 0;
+
+                carrinho.forEach ((produto) => {
+                    subtotal += Number(produto.preco) * produto.quantidade;
+                })
+
+                let frete = 0;
+
+                if (subtotal <25) {
+                    frete = 5;
+                }
+
+                const totalFinal = subtotal + frete;
+
+                const confirmar = confirm(
+                    "Resumo do pedido:\n" +
+                    "Subtotal: R$ " + subtotal.toFixed(2).replace (".", ",") + "\n" +
+                    "Frete: R$ " + frete.toFixed(2).replace (".", ",") + "\n" +
+                    "Total: R$ " + totalFinal.toFixed(2).replace (".", ",") +
+                    "\n\nDeseja confirmar o pedido?"
+                );
+                if (confirmar) {
+                    carrinho = [];
+
+                    mostrarCarrinho();
+                    atualizarContador();
+
+                    alert("Pedido confirmado com sucesso!");
+
+                    carrinhoElemento.classList.remove("aberto");
+                }
             })
