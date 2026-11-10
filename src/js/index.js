@@ -161,6 +161,8 @@ const totalPedido = document.querySelector("#totalPedido");
 
 const voltarCarrinho = document.querySelector("#voltarCarrinho");
 const confirmarPedidoModal = document.querySelector("#confirmarPedidoModal");
+const modalSucesso = document.querySelector("#modalSucesso");
+const fecharModalSucesso = document.querySelector("#fecharModalSucesso");
 
 let subtotal = 0;
 let frete = 0;
@@ -221,6 +223,12 @@ confirmarPedidoModal.addEventListener("click", () => {
 
     carrinhoElemento.classList.remove("aberto");
 
-    alert("Pedido confirmado com sucesso!");
-
+    //Abrir modal de sucesso
+    modalSucesso.style.display = "flex";
 });
+
+//Fechar modal de sucesso
+fecharModalSucesso.addEventListener("click", () =>{
+    modalSucesso.style.display = "none";
+});
+
