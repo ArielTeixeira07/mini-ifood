@@ -315,3 +315,8 @@ button:hover{
     top: -1px;
 }
 
+/* Seção de pedidos */
+.secao-pedidos{
+    display: none;
+}
+
