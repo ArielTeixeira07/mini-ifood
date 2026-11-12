@@ -232,3 +232,26 @@ fecharModalSucesso.addEventListener("click", () =>{
     modalSucesso.style.display = "none";
 });
 
+//Navegação entre Início e Pedidos
+const linkInicio = document.querySelector("#linkInicio");
+const linkPedidos = document.querySelector("#linkPedidos");
+
+const secaoInicio = document.querySelector("#secaoInicio");
+const secaoPedidos = document.querySelector("#secaoPedidos");
+
+//Abrir página inicial
+linkInicio.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    secaoPedidos.style.display = "none";
+    secaoInicio.style.display = "block";
+} );
+
+//Abrir a seção de pedidos
+linkPedidos.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    secaoInicio.style.display = "none";
+    secaoPedidos.style.display = "block";
+});
+
