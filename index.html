@@ -11,8 +11,8 @@
     <header class="cabecalho">
     <img class="logo" src="./src/img/ifood-43.svg" alt="ícone do Ifood">
     <ul class="menu">
-        <li><a href="">Home</a></li>
-        <li><a href="#secaoPedidos">Pedidos </a></li>
+        <li><a href="#home" id="linkInicio">Home</a></li>
+        <li><a href="#secaoPedidos" id="linkPedidos">Pedidos </a></li>
         <li class="item-carrinho">
             <a href="#" id="linkCarrinho">
                 <div class="icone-carrinho">
@@ -24,7 +24,9 @@
         </li>
     </ul>
     </header>
+
     <main class="home" id="home">
+    <section id="secaoInicio">
         <h1>Mini Ifood</h1>
 
         <h2>Escolha seu lanche:</h2>
@@ -48,7 +50,7 @@
             <button data-nome="Refrigerante" data-preco="10">Adicionar ao carrinho</button>
         </div>
     </div>
-
+</section>
     <!-- Seção de pedidos -->
     <section id="secaoPedidos" class="secao-pedidos">
         <h2>Meus pedidos</h2>
@@ -60,6 +62,7 @@
         </div>
     </section>
     </main>
+
     <section id="carrinho">
         <div class="cabecalho-carrinho">
         <h2>Meu Carrinho</h2>
